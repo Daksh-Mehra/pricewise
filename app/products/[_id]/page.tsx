@@ -11,15 +11,16 @@ import Modal from '@/components/Modal';
 
 type PageProps = { params: { _id: string } };
 
-const ProductDetails = async ({ params }: PageProps) => {
+const ProductDetails = async ({ params }:  { params: { _id: string } }) => {
   // console.log("ProductDetails: ", params._id);
+   const { _id } = await params;
 
-  const product:Product=await getProductById(params._id);
+  const product:Product=await getProductById(_id);
   if(!product){
     redirect('/');
   }
 
-  const similarProducts = await getSimilarProducts(params._id);
+  const similarProducts = await getSimilarProducts(_id);
 
   return (
     <div className='lex flex-col gap-16 flex-wrap px-6 md:px-20 py-24'>
