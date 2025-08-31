@@ -11,9 +11,9 @@ import Modal from '@/components/Modal';
 
 type PageProps = { params: { _id: string } };
 
-const ProductDetails = async ({ params }:  { params: { _id: string } }) => {
+const ProductDetails = async ({ params }:  PageProps) => {
   // console.log("ProductDetails: ", params._id);
-   const { _id } = await params;
+   const  _id  =  params._id;
 
   const product:Product=await getProductById(_id);
   if(!product){
