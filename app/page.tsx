@@ -11,7 +11,7 @@ const Home =async () => {
   // console.log("to be showned:  ",allProducts);
   return (
     <>
-      <section className='px-6 md:px-20 py-5'>
+      <section className='px-6 md:px-20 py-16'>
         <div className='flex max-xl:flex-col gap-16'>
           <div className='flex flex-col justify-center'>
             <p className="flex gap-2 font-medium text-sm text-primary">
@@ -42,7 +42,7 @@ const Home =async () => {
       <section className='flex flex-col gap-10 px-6 md:px-20 py-24'>
         <h2 className='text-secondary font-semibold text-3xl'>Trending</h2>
 
-        <div className='flex flex-wrap gap-x-6 gap-y-16'>
+        <div className='flex flex-wrap gap-x-10 gap-y-16'>
           {allProducts?.map((product)=>(
             <ProductCard key={product._id} product={product}/>
           ))}
