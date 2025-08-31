@@ -9,8 +9,9 @@ import PriceInfoCard from '@/components/PriceInfoCard';
 import ProductCard from '@/components/ProductCard';
 import Modal from '@/components/Modal';
 
+type PageProps = { params: { _id: string } };
 
-const ProductDetails = async ({params}:{params:{_id:string}}) => {
+const ProductDetails = async ({ params }: PageProps) => {
   // console.log("ProductDetails: ", params._id);
 
   const product:Product=await getProductById(params._id);
