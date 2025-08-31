@@ -15,9 +15,9 @@ const HeroCarousal = () => {
   return (
     <div className="max-w-[560px] h-[700px] relative sm:px-10 py-5 sm:pt-20 pb-5 w-full bg-[#F2F4F7] mx-auto rounded-[30px]">
       <Carousel 
-      // autoPlay
+      autoPlay
       infiniteLoop
-      // interval={2000}
+      interval={2000}
       showArrows={false}
       showThumbs={false}
       showStatus={false}
@@ -27,8 +27,8 @@ const HeroCarousal = () => {
           <Image 
           src={image.imgUrl}
           alt={image.alt}
-          width={484}
-          height={484}
+          width={404}
+          height={404}
           key={image.alt}
           className="object-contain"
           />

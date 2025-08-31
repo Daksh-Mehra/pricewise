@@ -25,7 +25,7 @@ const ProductDetails = async ({ params }:  PageProps) => {
   const similarProducts = await getSimilarProducts(_id);
 
   return (
-    <div className='lex flex-col gap-16 flex-wrap px-6 md:px-20 py-24'>
+    <div className='lex flex-col gap-16 flex-wrap px-6 md:px-20 py-10'>
       <div className='flex gap-28 xl:flex-row flex-col '>
         <div className='flex-grow xl:max-w-[50%] max-w-full py-16 border border-[#CDDBFF] rounded-[17px]'>
           <Image 
@@ -163,7 +163,7 @@ const ProductDetails = async ({ params }:  PageProps) => {
           height={22}
         />
 
-        <Link href='/' className='text-base text-white'>Buy Now</Link>
+        <Link href={product.url} className='text-base text-white'>Buy Now</Link>
       </button>
 
     </div>
