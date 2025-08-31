@@ -9,11 +9,13 @@ import PriceInfoCard from '@/components/PriceInfoCard';
 import ProductCard from '@/components/ProductCard';
 import Modal from '@/components/Modal';
 
-type PageProps = { params: { _id: string } };
+type PageProps = {
+  params: Promise<{ _id: string }> // 👈 params is a Promise!
+}
 
 const ProductDetails = async ({ params }:  PageProps) => {
   // console.log("ProductDetails: ", params._id);
-   const  _id  =  params._id;
+ const { _id } = await params;
 
   const product:Product=await getProductById(_id);
   if(!product){
